@@ -7,7 +7,7 @@
 
 # Introduction
 
-Dockerfile to build a Debian Wheezy image
+Dockerfile to build a Debian Jessie image
 with the Proxmox [vma](http://pve.proxmox.com/wiki/VMA#Command_line_utility)
 command line utility
 
@@ -23,13 +23,13 @@ If you find this image useful here's how you can help:
 Pull the latest version of the image from the docker index. This is the recommended method of installation as it is easier to update image in the future. These builds are performed by the **Docker Trusted Build** service.
 
 ```
-docker pull akaihola/vma:latest
+docker pull hensur/vma:latest
 ```
 
 Alternately you can build the image yourself.
 
 ```
-git clone https://github.com/akaihola/docker-vma.git
+git clone https://github.com/hensur/docker-vma.git
 cd docker-vma
 docker build -t "$USER/vma" .
 ```
@@ -38,7 +38,7 @@ docker build -t "$USER/vma" .
 Run the image and mount the directory containing your VMA images:
 
 ```
-# docker run -t -i -v <IMAGES DIRECTORY>:/images akaihola/vma:latest /bin/bash
+# docker run -t -i -v <IMAGES DIRECTORY>:/images hensur/vma:latest /bin/bash
 root@eed2c0767dc0:/# cd /images
 root@eed2c0767dc0:/images# vma
 usage: vma command [command options]
@@ -55,5 +55,5 @@ root@eed2c0767dc0:/images# vma extract my.vma my
 To upgrade to newer releases, simply upgrade the docker image:
 
 ```
-docker pull akaihola/vma:latest
+docker pull hensur/vma:latest
 ```
