@@ -13,7 +13,7 @@ command line utility
 Pull the latest version of the image from the docker registry. This is the recommended method of installation as it is easier to update image in the future. These builds are performed by the **Docker Trusted Build** service.
 
 ```
-docker pull hensur/vma:latest
+docker pull hensur/docker-vma:latest
 ```
 
 Alternately you can build the image yourself.
@@ -21,14 +21,14 @@ Alternately you can build the image yourself.
 ```
 git clone https://github.com/hensur/docker-vma.git
 cd docker-vma
-docker build -t "$USER/vma" .
+docker build -t "$USER/docker-vma" .
 ```
 
 # Quick Start
 Run the image and mount the directory containing your VMA images:
 
 ```
-# docker run -it -v <IMAGES DIRECTORY>:/images hensur/vma:latest
+# docker run -it -v <IMAGES DIRECTORY>:/images hensur/docker-vma:latest
 usage: vma command [command options]
 
 vma list <filename>
